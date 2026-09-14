@@ -1,0 +1,33 @@
+name: OSINT Toolkit Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check OSINT files
+        run: |
+          echo "=== OSINT TOOLKIT TEST ==="
+          python --version
+          echo ""
+          echo "Scripts:"
+          ls -la osint/scripts
+          echo ""
+          echo "Schemas:"
+          ls -la osint/schema
+          echo ""
+          echo "Test complete."
