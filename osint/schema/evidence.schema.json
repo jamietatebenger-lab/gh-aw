@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence.schema.json",
+  "title": "Forensic OSINT Evidence Record",
+  "description": "Structured schema for lawful public-source OSINT evidence, provenance, identity resolution, correlation and timeline analysis.",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "case_id",
+    "source",
+    "collected_utc",
+    "confidence"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": ["string", "null"]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "url",
+        "source_type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "title": {
+          "type": ["string", "null"]
+        },
+        "publisher": {
+          "type": ["string", "null"]
+        },
+        "source_type": {
+          "enum": [
+            "government",
+            "court",
+            "corporate_register",
+            "news",
+            "archive",
+            "academic",
+            "social_public",
+            "website",
+            "dns",
+            "certificate_transparency",
+            "whois_rdap",
+            "github",
+            "document",
+            "other"
+          ]
+        },
+        "published_date": {
+          "type": ["string", "null"]
+        },
+        "accessed_utc": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "claim": {
+      "type": ["string", "null"]
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "entity_type",
+          "value"
+        ],
+        "properties": {
+          "entity_type": {
+            "enum": [
+              "person",
+              "alias",
+              "organisation",
+              "business",
+              "location",
+              "username",
+              "domain",
+              "email",
+              "event",
+              "document"
+            ]
+          },
+          "value": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "identity_attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": ["string", "null"]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "date_of_birth": {
+          "type": ["string", "null"]
+        },
+        "location": {
+          "type": ["string", "null"]
+        },
+        "occupation": {
+          "type": ["string", "null"]
+        },
+        "organisation": {
+          "type": ["string", "null"]
+        },
+        "abn": {
+          "type": ["string", "null"]
+        },
+        "acn": {
+          "type": ["string", "null"]
+        },
+        "username": {
+          "type": ["string", "null"]
+        },
+        "domain": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "event_date": {
+          "type": ["string", "null"]
+        },
+        "date_precision": {
+          "enum": [
+            "exact",
+            "day",
+            "month",
+            "year",
+            "approximate",
+            "unknown"
+          ]
+        },
+        "location": {
+          "type": ["string", "null"]
+        },
+        "event": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "corroboration": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_grade": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "UNVERIFIED",
+        "REJECTED"
+      ]
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": ["string", "null"]
+        },
+        "size_bytes": {
+          "type": ["integer", "null"]
+        },
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "collected_utc": {
+      "type": "string"
+    },
+    "collector": {
+      "type": ["string", "null"]
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}
