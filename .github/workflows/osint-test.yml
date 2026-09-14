@@ -1,4 +1,4 @@
-name: OSINT Toolkit Test
+name: OSINT Case Pipeline
 
 on:
   workflow_dispatch:
@@ -19,15 +19,21 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Check OSINT files
+      - name: Check OSINT scripts
         run: |
-          echo "=== OSINT TOOLKIT TEST ==="
-          python --version
-          echo ""
-          echo "Scripts:"
-          ls -la osint/scripts
-          echo ""
-          echo "Schemas:"
-          ls -la osint/schema
-          echo ""
-          echo "Test complete."
+          echo "Checking OSINT toolkit..."
+          test -f osint/scripts/generate_queries.py
+          test -f osint/scripts/correlate_entities.py
+          test -f osint/scripts/build_timeline.py
+          test -f osint/scripts/evidence_hash.py
+          test -f osint/scripts/run_case.py
+          test -f osint/scripts/validate_case.py
+          echo "All OSINT scripts found."
+
+      - name: Python syntax check
+        run: |
+          python -m py_compile osint/scripts/*.py
+
+      - name: Toolkit complete
+        run: |
+          echo "OSINT Case Pipeline passed."
