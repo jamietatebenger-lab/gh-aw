@@ -1,0 +1,418 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "case.schema.json",
+  "title": "Forensic OSINT Case",
+  "description": "Schema for managing a lawful public-source OSINT investigation case.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "case_id",
+    "title",
+    "status",
+    "authority",
+    "opened_at",
+    "subjects",
+    "objectives"
+  ],
+
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique investigation identifier."
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "ACTIVE",
+        "ON_HOLD",
+        "REVIEW",
+        "CLOSED",
+        "ARCHIVED"
+      ]
+    },
+
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "basis",
+        "scope"
+      ],
+      "properties": {
+        "basis": {
+          "type": "string",
+          "description": "Contractual, organisational, legal or other documented authority for the investigation."
+        },
+
+        "client": {
+          "type": "string"
+        },
+
+        "reference": {
+          "type": "string"
+        },
+
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+
+        "prohibited_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "unauthorised system access",
+            "credential acquisition",
+            "private account access",
+            "covert device tracking",
+            "telecommunications interception"
+          ]
+        }
+      }
+    },
+
+    "opened_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "closed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/subject"
+      }
+    },
+
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "search_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "source_categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "government",
+          "court",
+          "corporate",
+          "regulatory",
+          "archive",
+          "news",
+          "academic",
+          "public_social",
+          "domain_dns",
+          "certificate_transparency",
+          "public_web",
+          "historical_record",
+          "other"
+        ]
+      }
+    },
+
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence_reference"
+      }
+    },
+
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+
+    "timeline": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/timeline_event"
+      }
+    },
+
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "created_by": {
+      "type": "string"
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+
+  "$defs": {
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject_id",
+        "primary_name"
+      ],
+      "properties": {
+        "subject_id": {
+          "type": "string"
+        },
+
+        "primary_name": {
+          "type": "string"
+        },
+
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "name_variants": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "approximate_birth_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "organisations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "business_identifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "public_usernames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "public_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "identity_status": {
+          "type": "string",
+          "enum": [
+            "UNVERIFIED",
+            "POSSIBLE",
+            "PROBABLE",
+            "CONFIRMED",
+            "REJECTED"
+          ],
+          "default": "UNVERIFIED"
+        }
+      }
+    },
+
+    "evidence_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id"
+      ],
+      "properties": {
+        "evidence_id": {
+          "type": "string"
+        },
+
+        "path": {
+          "type": "string"
+        },
+
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+
+        "claim": {
+          "type": "string"
+        },
+
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CONFIRMED",
+            "REJECTED"
+          ]
+        }
+      }
+    },
+
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "target",
+        "relationship_type"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+
+        "target": {
+          "type": "string"
+        },
+
+        "relationship_type": {
+          "type": "string"
+        },
+
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CONFIRMED",
+            "REJECTED"
+          ]
+        }
+      }
+    },
+
+    "timeline_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "date",
+        "description"
+      ],
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+
+        "date": {
+          "type": "string"
+        },
+
+        "end_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+
+        "description": {
+          "type": "string"
+        },
+
+        "location": {
+          "type": "string"
+        },
+
+        "subject_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "CONFIRMED",
+            "DISPUTED"
+          ]
+        }
+      }
+    }
+  }
+}
