@@ -34,6 +34,17 @@
             "pull-requests": "write",
             "workflows": "write"
           }
+        },
+        "jamietatebenger-lab/gh-aw": {
+          "permissions": {
+            "actions": "write",
+            "checks": "write",
+            "contents": "write",
+            "discussions": "write",
+            "issues": "write",
+            "pull-requests": "write",
+            "workflows": "write"
+          }
         }
       }
     }
