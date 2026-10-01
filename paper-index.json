@@ -1,0 +1,154 @@
+{
+  "papers": [
+    {
+      "id": "2609.40111v1",
+      "published": "2026-09-30",
+      "relevant": true,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.39982v1",
+      "published": "2026-09-30",
+      "relevant": true,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40027v1",
+      "published": "2026-09-30",
+      "relevant": true,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40330v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40325v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40324v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40306v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40303v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40285v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40284v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40269v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40253v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40245v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40230v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40221v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40195v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40169v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40159v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40143v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40137v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40134v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40079v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40070v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.40003v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    },
+    {
+      "id": "2609.39989v1",
+      "published": "2026-09-30",
+      "relevant": false,
+      "analyzed_at": "2026-10-01-15-40-00"
+    }
+  ]
+}
