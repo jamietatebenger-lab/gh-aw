@@ -23,6 +23,34 @@ Papers investigated for GitHub Agentic Workflows improvement opportunities.
 - **Opportunity**: Validate the policy/graph gating tool calls itself; red-team safe-outputs configuration against misspecification
 - **Area**: Safe outputs
 
+### [Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents](https://arxiv.org/abs/2610.03315v1)
+- **ID**: 2610.03315v1
+- **Published**: 2026-10-02
+- **Categories**: cs.AI
+- **Relevant**: Yes
+- **Opportunity**: Budget-bounded trace preprocessing plus a single rubric-guided judge in `gh aw audit`/logs to localize failures cheaply
+- **Area**: Observability
+
+### [Pinning Decisions Before Failure: Executable Records of Underspecified Choices in AI-Assisted Code Generation](https://arxiv.org/abs/2610.03237v1)
+- **ID**: 2610.03237v1
+- **Published**: 2026-10-02
+- **Categories**: cs.SE
+- **Relevant**: Yes
+- **Opportunity**: Have workflow-authoring agents enumerate ambiguous requirements and record confirmed "decision pins" to constrain generation
+- **Area**: Workflow authoring
+
+### [Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks](https://arxiv.org/abs/2610.03585v1)
+- **ID**: 2610.03585v1
+- **Published**: 2026-10-02
+- **Categories**: cs.CR
+- **Relevant**: Yes
+- **Opportunity**: Test safe-outputs/threat-detection against representation-preserving variants of attacks (encoding, format changes)
+- **Area**: Safe outputs
+
+### Not relevant (2026-10-05)
+Each of the following: **Relevant**: No
+- 2610.03715v1, 2610.03709v1, 2610.03675v1, 2610.03634v1, 2610.03631v1, 2610.03620v1, 2610.03604v1, 2610.03598v1, 2610.03591v1, 2610.03574v1, 2610.03564v1, 2610.03524v1, 2610.03476v1, 2610.03458v1, 2610.03372v1, 2610.03361v1, 2610.03356v1, 2610.03330v1, 2610.03312v1, 2610.03226v1, 2610.03223v1, 2610.03213v1
+
 ### Not relevant (2026-09-30)
 Each of the following: **Relevant**: No
 - [Turbo Harness](https://arxiv.org/abs/2609.40330v1) 2609.40330v1

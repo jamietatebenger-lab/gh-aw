@@ -1,6 +1,159 @@
 {
   "papers": [
     {
+      "id": "2610.03315v1",
+      "title": "Lightweight, Rubric-Guided Trajectory Evaluation for Production AI Agents",
+      "published": "2026-10-02",
+      "relevant": true,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03237v1",
+      "title": "Pinning Decisions Before Failure: Executable Records of Underspecified Choices in AI-Assisted Code Generation",
+      "published": "2026-10-02",
+      "relevant": true,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03585v1",
+      "title": "Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks",
+      "published": "2026-10-02",
+      "relevant": true,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03715v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03709v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03675v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03634v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03631v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03620v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03604v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03598v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03591v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03574v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03564v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03524v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03476v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03458v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03372v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03361v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03356v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03330v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03312v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03226v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03223v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
+      "id": "2610.03213v1",
+      "published": "2026-10-02",
+      "relevant": false,
+      "analyzed_at": "2026-10-05-17-15-34"
+    },
+    {
       "id": "2609.40111v1",
       "published": "2026-09-30",
       "relevant": true,
